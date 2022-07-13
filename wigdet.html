@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="greet.js"></script>
+    <script src="greetevent.js"></script>
+    <script src="totalphonebill.js"></script>
+    <script src="totalevent.js"></script>
+    <script src="transevent.js"></script>
+    <script src="trans.js"></script>
+    <script src="enough.js"></script>
+    <script src="enoughevent.js"></script>
+    <script src="expensiveevent.js"></script>
+    <script src="expensive.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="//unpkg.com/alpinejs" defer></script>
+
+
+
+</head>
+
+<body>
+    <h1>Bootcamp alpineJS Widgets</h1>
+    <div class="widgets">
+       
+
+        <div class="greet" x-data="greetWidget">
+            <h2>Greet Widget</h2>
+            <div x-show="message.length > 0" class="message" x-text="message">
+                You will be greeted here...
+            </div>
+            <input type="text" x-model="name" id="name">
+            <button x-on:click="greetMe">Greet!</button>
+        </div>
+        <div class="bill" x-data="totalPhoneBillWidget">
+            <h2>Total Phone Bill Widget</h2>
+
+            <div class="input">
+                <label for="usage">enter phone usage
+                :</label>
+                <input type="text" x-model="airtimeUsage" id="usage">
+            </div>
+
+            <div class="message" x-text="airtimeMessage">
+
+            </div>
+
+            <div>
+                <button x-on:click="calculate">Calculate Total phone bill</button>
+            </div>
+        </div>
+    </div>
+    <div class="widget2">
+        <div class="trans" x-data="transportFeeWidget">
+            <h2>Transport Fee Widget</h2>
+            <div class="input">
+                <label for="shift">Please enter your shift:</label>
+                <input type="text" x-model="workingShift" id="shift">
+            </div>
+
+            <div class="message" x-text="transportFeeMessage">
+
+            </div>
+
+            <div>
+                <button x-on:click="calculate">Calculate Transport fee</button>
+            </div>
+        </div>
+        <div class="expensive" x-data="expensiveItemsWidget">
+            <h3>Expensive Items</h3>
+            <div class="input">
+                <label for="items">Please enter items :</label>
+                <input type="text" x-model="itemsList" id="items">
+            </div>
+
+            <div class="input">
+                <label for="amount"> threshold amount:</label>
+                <input type="text" x-model="thresholdAmount" id="amount">
+            </div>
+
+            <div class="message" x-text="expensiveItemsMessage">
+
+            </div>
+
+            <div>
+                <button x-on:click="calculate">Find expensive items</button>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>
+</body>

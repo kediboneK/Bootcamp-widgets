@@ -1,0 +1,48 @@
+body{
+    background-color: grey;
+}
+.widgets{
+    display: flex;
+}
+.widget2{
+    display: flex;
+
+}
+.greet{
+    margin: 1em;
+    padding: 1em;
+    border-radius: 1em;
+    background-color: brown;
+}
+.bill{
+    margin: 1em;
+    padding: 1em;
+    border-radius: 1em;
+    background-color: pink;
+}
+.trans{
+    margin: 1em;
+    padding: 1em;
+    border-radius: 1em;
+    background-color: palegreen;
+    
+
+}
+.expensive{
+    margin: 1em;
+    padding: 1em;
+    border-radius: 1em;
+    background-color: yellowgreen;
+    
+
+}
+@media(max-width:760px){
+    .widgets{
+        display: block;
+    }
+    .widget2{
+        display: block;
+    
+    }
+
+}
